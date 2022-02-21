@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,500&display=swap');
+
+:root {
+  --primary-color: #0290ff;
+  --main-conatianer-color: #f5f6fa;
+  --header-bg-color: #fafafa;
+  --white-two: #e8e8e8;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2.1em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100%;
+}
+
+.main-container {
+  width: 90%;
+  height: 100%;
+  margin: 9em auto;
+  padding-bottom: 15em;
+  margin-bottom: 0;
+  background-color: var(--main-conatianer-color);
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+}
+
+.icon-color {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -11px;
+  color: var(--primary-color);
+  font-size: 1.4em;
+}
+
+.header-right-content {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.35);
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3em 2em;
+  background-color: var(--header-bg-color);
+}
+
+.header-container h1 {
+  color: var(--primary-color);
+  font-weight: bolder;
+}
+
+.header-left-content {
+  display: flex;
+  gap: 20px;
+}
+
+.header-container ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.linker {
+  list-style-type: none;
+  cursor: pointer;
+  opacity: 0.7;
+  text-decoration: none;
+  color: #000;
+}
+
+.linker:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-color: var(--primary-color);
+  text-decoration-thickness: 2px;
+}
+
+.linker:focus {
+  opacity: 1;
+}
+
+/* Book Container */
+
+.books-main-conatainer {
+  margin: 3em 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.book-container {
+  width: 100%;
+  padding: 2em 6%;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid var(--white-two);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book-left-bottom-content button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.button-separator {
+  margin: 0 2px;
+}
+
+.book-category {
+  margin-bottom: 0.8em;
+}
+
+.book-author {
+  margin-top: 0.3em;
+  margin-bottom: 1.5em;
+  color: var(--primary-color);
+}
+
+.progress {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.progress .inner {
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 85px;
+  width: 85px;
+  margin: -43px 0 0 -42px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.circle {
+  height: 100px;
+  width: 100px;
+  position: relative;
+}
+
+.circle .oval-progress-left {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+
+.circle .oval-progress-right {
+  position: absolute;
+  top: 3%;
+  left: 20%;
+  height: 100px;
+  width: 100px;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+
+.progress .right {
+  z-index: 3;
+  transform: rotate(90deg);
+}
+
+.progress .left {
+  z-index: 1;
+  background-color: pink;
+}
+
+.circle .progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+
+  --webkit-border-radius: 100%;
+
+  background-color: #4158d0;
+}
+
+.progress-text h4 {
+  font-size: 2em;
+}
+
+.progress-text p {
+  opacity: 0.7;
+}
+
+.book-right-content {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.line {
+  width: 3px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.35);
+  margin: 0 30px;
+}
+
+.update-progress-container {
+  width: 250px;
+}
+
+.update-progress-container p {
+  opacity: 0.7;
+  margin-bottom: 8px;
+  word-wrap: break-word;
+}
+
+.update-progress-container h5 {
+  margin-bottom: 20px;
+}
+
+.update-progress-container button {
+  padding: 10px 12px;
+  color: #fff;
+  background-color: var(--primary-color);
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hr {
+  width: 85%;
+  margin: 0 auto;
+  height: 2px;
+  color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.add-book-container {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 2.7em;
+}
+
+.add-book-container h4 {
+  font-size: 1.3em;
+}
+
+.add-book-form {
+  margin-top: 2.5em;
+  display: flex;
+  gap: 20px;
+}
+
+.add-book-form input {
+  outline: none;
+  padding-left: 10px;
+  height: 45px;
+  width: 50%;
+}
+
+.add-book-form select {
+  height: 45px;
+  width: 30%;
+  padding-left: 10px;
+  outline: none;
+}
+
+.add-book-form button {
+  height: 45px;
+  width: 20%;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.6em 1.2em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.categories {
+  margin-top: 6em;
+}
