@@ -2,7 +2,7 @@
 
 # BookStore
 
-> This is a book store app for storing books to read created using React, it performs basic fuctions like adding and deleteing a book.
+> This is a book store app for storing books to read created using React, it performs basic fuctions like adding,commenting and deleteing a book.
 
 ## Built With
 
