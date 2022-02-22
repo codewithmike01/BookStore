@@ -1,26 +1,36 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { removeBook } from '../redux/books/books';
 import BookProgressBar from './BookProgressBar';
 import UpdatePrgress from './UpdateProgress';
+import BookNameAuthor from './BookNameAuthor';
 
 const Book = (props) => {
-  const {
-    bookTitle, bookAuthor, bookCategory, progressPercent, chapter,
-  } = props;
+  const { progressPercent, chapter } = props;
+  const { bookTitle, bookAuthor, bookCategory } = props;
+  const { id } = props;
+
+  const dispatch = useDispatch();
+
+  const removeFromStore = (idTag) => {
+    dispatch(removeBook(idTag));
+  };
+
   return (
     <div className="book-container">
       <div className="book-left-content">
-        <div className="book-top-left-content">
-          <p className="book-category">{bookCategory}</p>
-          <h3>{bookTitle}</h3>
-          <p className="book-author">{bookAuthor}</p>
-        </div>
+        <BookNameAuthor
+          bookTitle={bookTitle}
+          bookAuthor={bookAuthor}
+          bookCategory={bookCategory}
+        />
         <div className="book-left-bottom-content">
           <button type="button">Comment </button>
-          {' '}
           <span className="button-separator">| </span>
-          <button type="button">Remove </button>
-          {' '}
+          <button type="button" onClick={() => removeFromStore(id)}>
+            Remove
+          </button>
           <span className="button-separator">| </span>
           <button type="button">Edit</button>
         </div>
@@ -35,11 +45,12 @@ const Book = (props) => {
 };
 
 Book.propTypes = {
+  chapter: PropTypes.string.isRequired,
+  progressPercent: PropTypes.string.isRequired,
   bookTitle: PropTypes.string.isRequired,
   bookCategory: PropTypes.string.isRequired,
   bookAuthor: PropTypes.string.isRequired,
-  chapter: PropTypes.string.isRequired,
-  progressPercent: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Book;
