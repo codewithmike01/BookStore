@@ -1,7 +1,8 @@
+/* eslint-disable operator-linebreak */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import uuid from 'react-uuid';
-import { addBook } from '../redux/books/books';
+import { postBooks } from '../redux/books/books';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -10,21 +11,21 @@ const AddBook = () => {
     event.preventDefault();
 
     if (
-      event.target.title.value.trim()
-      && event.target.Category.value.trim()
-      && event.target.author.value.trim()
+      event.target.title.value.trim() &&
+      event.target.Category.value.trim() &&
+      event.target.author.value.trim()
     ) {
-      const newBook = {
-        id: uuid(),
-        title: event.target.title.value,
-        author: event.target.author.value,
+      const concateTitle = `${event.target.title.value}:${event.target.author.value}`;
+      let newBook = {
+        item_id: uuid(),
+        title: concateTitle,
         category: event.target.Category.value,
       };
-
-      dispatch(addBook(newBook));
+      dispatch(postBooks(newBook));
       const { title, author } = event.target;
       title.value = '';
       author.value = '';
+      newBook = {};
     } else alert('Empty Value not allowed ---- Will modify to a Popup later');
   };
 

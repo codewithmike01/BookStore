@@ -9,7 +9,7 @@ const BookNameAuthor = (props) => {
     <div className="book-top-left-content">
       <p className="book-category">{bookCategory}</p>
       <h3>{bookTitle}</h3>
-      <p className="book-author">{bookAuthor}</p>
+      <p className="book-author">{bookAuthor || ' '}</p>
     </div>
   );
 };
