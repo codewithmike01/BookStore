@@ -38,7 +38,7 @@ function App() {
     border-color: red;
   `;
 
-  const color = '#456478';
+  const color = '#0290ff';
 
   return (
     <Router>
