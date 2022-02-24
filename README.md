@@ -16,13 +16,9 @@
 ## Live Demo 
 [Live Link](https://mike-bookstore.herokuapp.com/)
 
-<!-- [Live link one](https://mike-magic-calculator.netlify.app/) -->
-
-<!-- [Live Demo Link](https://livedemo.com) -->
-
 ## Getting Started
 
-<!-- https://ginohmk.github.io/calculator-UsingReact/ -->
+
 
 To get a local copy up and running follow these simple example steps.
 
