@@ -114,13 +114,14 @@ h3 {
 
 .book-container {
   width: 95%;
-  padding: 2em 0;
+  padding: 3.5em 4em;
   padding-left: 1em;
   border-radius: 4px;
   background-color: #fff;
   border: 1px solid var(--white-two);
   display: flex;
   align-items: center;
+  gap: 6em;
   justify-content: space-between;
   transform: scale(1);
   animation: scalein 2s ease-in;
@@ -202,7 +203,7 @@ h3 {
   width: 3px;
   height: 100px;
   background-color: rgba(0, 0, 0, 0.35);
-  margin: 0 30px;
+  margin: 0 5em;
 }
 
 .update-progress-container {

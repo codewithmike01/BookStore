@@ -4,20 +4,19 @@
 
 > This is a book store app for storing books to read created using React, it performs basic fuctions like adding and deleteing a book.
 
+<br> <br>
+![screenShoot Desktop](https://user-images.githubusercontent.com/58771507/155540877-3f500fbd-2539-4b56-94d0-df6a2fb7434d.png)
+
 ## Built With
 
 - React
 - Babel
 
-## Live Demo (Not avialable yet)
+## Live Demo
 
-<!-- [Live link one](https://mike-magic-calculator.netlify.app/) -->
-
-<!-- [Live Demo Link](https://livedemo.com) -->
+[Live Link](https://mike-bookstore.herokuapp.com/)
 
 ## Getting Started
-
-<!-- https://ginohmk.github.io/calculator-UsingReact/ -->
 
 To get a local copy up and running follow these simple example steps.
 
