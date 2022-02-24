@@ -33,15 +33,19 @@ const AddBook = () => {
     <div className="add-book-container">
       <h4> ADD NEW BOOK</h4>
       <form className="add-book-form" onSubmit={(e) => submitBookToStore(e)}>
-        <input type="text" placeholder="Book title" name="title" />
-        <input type="text" placeholder=" Book Author" name="author" />
-        <select name="Category" required>
-          <option value="Action"> Action</option>
-          <option value="Science Fiction"> Science Fiction</option>
-          <option value="Economy"> Econnomy</option>
-        </select>
-
-        <button type="submit">ADD BOOK</button>
+        <div className="upper-form-content">
+          <input type="text" placeholder="Book title" name="title" />
+          <input type="text" placeholder=" Book Author" name="author" />
+          <select name="Category" required>
+            <option defaultValue>Category</option>
+            <option value="Action"> Action</option>
+            <option value="Science Fiction"> Science Fiction</option>
+            <option value="Economy"> Econnomy</option>
+          </select>
+        </div>
+        <div className="btn-container">
+          <button type="submit">ADD BOOK</button>
+        </div>
       </form>
     </div>
   );
