@@ -26,7 +26,7 @@ const AddBook = () => {
       title.value = '';
       author.value = '';
       newBook = {};
-    } else alert('Empty Value not allowed ---- Will modify to a Popup later');
+    } else alert('Empty Value not allowed -- Will modify to a Popup later');
   };
 
   return (
