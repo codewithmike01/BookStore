@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { removeBook } from '../redux/books/books';
+import { deleteBook } from '../redux/books/books';
 import BookProgressBar from './BookProgressBar';
 import UpdatePrgress from './UpdateProgress';
 import BookNameAuthor from './BookNameAuthor';
@@ -14,7 +14,7 @@ const Book = (props) => {
   const dispatch = useDispatch();
 
   const removeFromStore = (idTag) => {
-    dispatch(removeBook(idTag));
+    dispatch(deleteBook(idTag));
   };
 
   return (
@@ -22,7 +22,7 @@ const Book = (props) => {
       <div className="book-left-content">
         <BookNameAuthor
           bookTitle={bookTitle}
-          bookAuthor={bookAuthor}
+          bookAuthor={bookAuthor || ''}
           bookCategory={bookCategory}
         />
         <div className="book-left-bottom-content">
